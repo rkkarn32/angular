@@ -6,13 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-  customer : any[];
+  customer : any[]=[];
   title = 'ExportExcel';
-
-  OnInit() {
+  
+  ngOnInit() {
+    console.log('Logging Started');
     for (let i = 1; i < 25; i++) {
       this.customer.push({ firstName: 'Ramesh' + i, roll: i })
     }
-    this.customer.forEach(d => console.log(d[0]))
   }
 }
